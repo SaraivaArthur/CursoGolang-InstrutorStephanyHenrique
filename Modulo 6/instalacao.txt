@@ -1,0 +1,7 @@
+=========== Módulo 6 ===========
+
+> O que foi feito no módulo 6? 
+
+> Foi feito a instalação do go via navegador;
+> Adicionei a extensão go na IDE Vscode;
+> Baixei todos os pacotes no Vscode usando ">GO: Install/Update Tools".
