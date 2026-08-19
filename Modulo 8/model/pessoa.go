@@ -1,6 +1,9 @@
 package model
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type Pessoa struct {
 	Nome             string
@@ -9,14 +12,10 @@ type Pessoa struct {
 	Idade            int
 }
 
-func (p Pessoa) IdadeAtual() int {
-	anoDeNascimento := p.DataDeNascimento.Year()
-	anoAtual := time.Now().Year()
-	return anoAtual - anoDeNascimento
-}
-
 func (p *Pessoa) CalculaIdade() int {
 	anoDeNascimento := p.DataDeNascimento.Year()
 	anoAtual := time.Now().Year()
-	return anoAtual - anoDeNascimento
+	p.Idade = anoAtual - anoDeNascimento
+	fmt.Println("Idade: ", p.Idade)
+	return p.Idade
 }
